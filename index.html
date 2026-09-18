@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EcoPulse — Climate Action</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-orb orb1"></div><div class="bg-orb orb2"></div>
+
+<nav>
+  <div class="logo"><span>✦</span> EcoPulse</div>
+  <div class="navlinks"><a href="#how">How it works</a><a href="#checker">Eco assistant</a><a href="#actions">Topics</a><a href="#impact">Impact</a></div>
+  <button class="navbtn" type="button" onclick="goToChecker()">Ask EcoPulse ↗</button>
+</nav>
+
+<main>
+<section class="hero">
+  <div class="eyebrow"><span class="dot"></span> CLIMATE ACTION · UNIVERSITY PROJECT</div>
+  <h1>Your habits.<br><em>Smarter</em> climate action.</h1>
+  <p class="hero-copy">EcoPulse turns everyday student habits into practical, personalized actions that reduce environmental impact — one small choice at a time.</p>
+  <div class="hero-actions">
+    <button class="primary" type="button" onclick="goToChecker()">Ask EcoPulse <span>→</span></button>
+    <a class="secondary" href="#how">See how it works ↓</a>
+  </div>
+  <div class="stats">
+    <div><strong>73%</strong><span>of emissions can be influenced by daily choices</span></div>
+    <div><strong>01</strong><span>simple habit can start a chain reaction</span></div>
+    <div><strong>AI</strong><span>turns data into useful next steps</span></div>
+  </div>
+</section>
+
+<section id="how" class="section">
+  <div class="section-label">01 / THE IDEA</div>
+  <div class="two-col">
+    <div><h2>Climate action<br>starts <em>closer</em> than you think.</h2></div>
+    <div class="intro"><p>Students make dozens of environmental choices every day — often without noticing them.</p><p>EcoPulse uses an AI-style recommendation engine to connect those habits with practical, achievable actions.</p></div>
+  </div>
+  <div class="cards">
+    <article><span class="icon">⌁</span><h3>01 — Notice</h3><p>Track everyday choices around energy, transport, food and waste.</p></article>
+    <article><span class="icon">✦</span><h3>02 — Understand</h3><p>See which habits have the biggest environmental effect.</p></article>
+    <article><span class="icon">→</span><h3>03 — Act</h3><p>Get small recommendations designed around your real routine.</p></article>
+  </div>
+</section>
+
+<section id="checker" class="checker">
+  <div class="section-label">02 / ECO ASSISTANT</div>
+  <div class="checker-grid">
+    <div><h2>Write what’s on<br>your <em>mind.</em></h2><p>Ask about a habit, an environmental issue, a campus idea, or the first step you should take. EcoPulse will turn it into useful direction.</p><div class="assistant-notes"><span>✦ No fixed answers</span><span>⌁ Practical next steps</span><span>→ Your own pace</span></div></div>
+    <div class="chat-shell">
+      <div class="chat-top"><div class="assistant-avatar">✦</div><div><strong>EcoPulse Guide</strong><span><i></i> ready to help</span></div><button class="clear-chat" type="button" onclick="clearChat()" aria-label="Clear conversation">Clear</button></div>
+      <div class="chat-log" id="chatLog" aria-live="polite"><div class="message assistant-message"><span class="message-label">ECOPULSE</span><p>Hi — I’m here to make climate action feel less overwhelming. What would you like help with today?</p></div></div>
+      <div class="prompt-ideas"><button type="button" onclick="usePrompt(this)">How can I waste less?</button><button type="button" onclick="usePrompt(this)">Help me make a campus project</button><button type="button" onclick="usePrompt(this)">What can I change this week?</button></div>
+      <form class="chat-input" id="chatForm"><label class="sr-only" for="userPrompt">Your message</label><textarea id="userPrompt" rows="2" placeholder="Write anything… e.g. I use a car every day — where should I start?"></textarea><button class="send-button" type="submit" aria-label="Send message">↑</button></form>
+      <p class="form-note">A local learning prototype — your messages remain in this browser.</p>
+    </div>
+  </div>
+</section>
+
+<section id="actions" class="recommendation">
+  <div class="section-label">03 / YOUR TOOLKIT</div>
+  <div id="resultBox" aria-live="polite">
+    <div class="result-placeholder"><span>✦</span><h2>Your next step<br>will appear here.</h2><p>Ask EcoPulse a question, then save a useful action from its answer.</p></div>
+  </div>
+</section>
+
+<section class="pledge" aria-labelledby="pledgeTitle">
+  <div><div class="section-label">04 / MAKE IT STICK</div><h2 id="pledgeTitle">A plan is only useful<br>when it <em>fits your life.</em></h2></div>
+  <div class="pledge-copy"><p>Choose one action to focus on this week. Tiny, repeatable changes are the ones that last.</p><div class="week-progress"><div class="progress-label"><span>This week's commitment</span><strong id="pledgeStatus">Not chosen yet</strong></div><div class="progress-track"><span id="progressFill"></span></div></div></div>
+</section>
+
+<section id="impact" class="impact">
+  <div><div class="section-label">05 / THE BIGGER PICTURE</div><h2>Small actions.<br><em>Collective impact.</em></h2></div>
+  <div class="impact-number"><strong>1</strong><span>student</span><div class="line"></div><strong>× 1,000</strong><span>small changes</span><div class="line"></div><strong>→</strong><span>a campus culture shift</span></div>
+</section>
+</main>
+
+<footer><div class="logo"><span>✦</span> EcoPulse</div><p>Designed for a more climate-conscious campus.</p><span>2026 · UNIVERSITY PROJECT</span></footer>
+<script src="script.js"></script>
+</body>
+</html>
